@@ -7,6 +7,11 @@ const habitSchema = new mongoose.Schema(
       required: [true, 'Habit name is required'],
       trim: true,
     },
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      required: true,
+    },
   },
   { timestamps: true }
 );
