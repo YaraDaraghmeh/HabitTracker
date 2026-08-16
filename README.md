@@ -20,7 +20,7 @@ The database is **never** accessed directly from the frontend; every interaction
 
 ---
 
-## 🧱 Project Structure
+## Project Structure
 
 ```
 habit-tracker/
@@ -70,7 +70,7 @@ habit-tracker/
 
 ---
 
-## 🗄️ Data Models & Relationships
+##  Data Models & Relationships
 
 The database has 3 collections, chained together in a **one-to-many** relationship:
 
