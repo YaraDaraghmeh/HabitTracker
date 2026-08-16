@@ -6,8 +6,8 @@ const options = {
         info: {
             title: 'Habit Tracker API',
             version: '1.0.0',
-            description: 'Back end System for Simple  Habit Tracker App',
-
+            description:
+                'This is a simple Habit Tracker API application built with Express and documented with Swagger',
         },
         servers: [
             {
@@ -20,7 +20,40 @@ const options = {
             }
         ],
         components: {
+            securitySchemes: {
+                bearerAuth: {
+                    type: 'http',
+                    scheme: 'bearer',
+                    bearerFormat: 'JWT',
+                },
+            },
             schemas: {
+                SignupInput: {
+                    type: 'object',
+                    required: ['name', 'email', 'password'],
+                    properties: {
+                        name: { type: 'string', example: 'Yara' },
+                        email: { type: 'string', example: 'yara@example.com' },
+                        password: { type: 'string', example: 'password123' },
+                    },
+                },
+                LoginInput: {
+                    type: 'object',
+                    required: ['email', 'password'],
+                    properties: {
+                        email: { type: 'string', example: 'yara@example.com' },
+                        password: { type: 'string', example: 'password123' },
+                    },
+                },
+                AuthResponse: {
+                    type: 'object',
+                    properties: {
+                        _id: { type: 'string' },
+                        name: { type: 'string' },
+                        email: { type: 'string' },
+                        token: { type: 'string', example: 'eyJhbGciOiJIUzI1NiIs...' },
+                    },
+                },
                 Habit: {
                     type: 'object',
                     properties: {
