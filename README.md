@@ -290,6 +290,6 @@ This logic is the project's core frontend responsibility — the backend's job e
 
 ---
 
-## 👩‍💻 Author
+##  Author
 
 **Yara** — Computer Engineering Graduate, An-Najah National University
